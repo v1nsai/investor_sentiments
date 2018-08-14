@@ -38,6 +38,3 @@ for (file in files) {
 
 df <- df[-1,]
 write.csv(df, '/Users/doctor_ew/Documents/GitHub/investor_sentiments/sentiments.csv', row.names=FALSE)
-# feelings_raw <- merge(x=df, y=nrc, by='word')
-# feelings_summarized <- count(feelings_raw, filename, sentiment)
-# write.csv(sentiments, '/Users/doctor_ew/Downloads/sentiment_analysis/sentiments.csv', row.names=FALSE)
