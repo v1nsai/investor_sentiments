@@ -33,7 +33,7 @@ for (file in files) {
   swapfeelings_sum <- count(swapfeelings, filename, sentiment)
   df <- rbind(df, swapfeelings_sum)
 
-  write.csv(df, '/Users/doctor_ew/Downloads/sentiment_analysis/sentiments.csv', row.names=FALSE)
+  write.csv(df, '/Users/doctor_ew/Documents/GitHub/investor_sentiments/sentiments.csv', row.names=FALSE)
 }
 
 # feelings_raw <- merge(x=df, y=nrc, by='word')
