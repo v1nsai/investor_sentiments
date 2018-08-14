@@ -17,9 +17,12 @@ regulatory_policy_changes <- c('regulatory_policy_changes', 'regulat', 'policy',
 thematic_aspects <- c('thematic_aspects', 'future of', 'climate change')
 long_term_horizon <- c('long_term_horizon', 2019:2030)
 
+# Create a list of lists for the keywords
 keywords <- list(social, economic_changes, demographic_changes, sector_changes, 
                  regulatory_policy_changes, thematic_aspects, long_term_horizon)
 
+# Iterate through each of the files and each term in the list and count the occurrence of each term
+# Calculate results and add to the results dataframe
 for (fil in files) {
   swaptxt <- pdf_text(fil)
   for (list in keywords) {
@@ -34,5 +37,5 @@ for (fil in files) {
   }
 }
 
-results <- results[-1,]
+results <- results[-1,] 
 write.csv(results, '/Users/doctor_ew/Documents/GitHub/investor_sentiments/results.csv', row.names=FALSE)
