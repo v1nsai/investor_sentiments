@@ -4,8 +4,8 @@ library(dplyr)
 
 # Set up vars
 nrc <- get_sentiments('nrc')
-setwd('/Users/doctor_ew/Downloads/sentiment_analysis/pdfs')
-files <- list.files('/Users/doctor_ew/Downloads/sentiment_analysis/pdfs')
+setwd('/Users/doctor_ew/Documents/GitHub/investor_sentiments/pdfs')
+files <- list.files('/Users/doctor_ew/Documents/GitHub/investor_sentiments/pdfs')
 df <- data.frame(filename=' ', sentiment=' ', n=0)
 wordlist <- list('')
 

@@ -1,12 +1,12 @@
 library(pdftools)
 library(plyr)
 
-setwd('/Users/doctor_ew/Downloads/sentiment_analysis/pdfs')
+setwd('/Users/doctor_ew/Documents/GitHub/investor_sentiments/pdfs')
 
 # Initialize text and dataframe
 results = data.frame(filename=' ', category=' ', word=' ', occurrences=' ', stringsAsFactors = FALSE)
 swap = list(filename=' ', category=' ', word=' ', occurrences=0)
-files <- list.files('/Users/doctor_ew/Downloads/sentiment_analysis/pdfs')
+files <- list.files('/Users/doctor_ew/Documents/GitHub/investor_sentiments/pdfs')
 
 # Keyword lists
 social=c('social', 'society')
@@ -35,4 +35,4 @@ for (fil in files) {
 }
 
 results <- results[-1,]
-write.csv(results, '/Users/doctor_ew/Downloads/sentiment_analysis/results.csv', row.names=FALSE)
+write.csv(results, '/Users/doctor_ew/Documents/GitHub/investor_sentiments/results.csv', row.names=FALSE)
